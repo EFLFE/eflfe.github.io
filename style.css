@@ -1,0 +1,109 @@
+@font-face {
+  font-family: ubuntu;
+  src: url(Ubuntu-M.ttf);
+}
+
+body {
+  color: rgb(221, 229, 245);
+  background-color: black;
+  font-family: "ubuntu";
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  text-shadow: 0 0 12px black;
+  font-size: 32px;
+  height: 100%;
+  margin: 0;
+}
+
+#bgimg {
+  background-image: url(img/bg.jpg);
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#content {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#content-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 100px;
+}
+
+#content-top-img {
+  position: relative;
+  height: 184px;
+  margin: 1em;
+}
+
+#content-mid {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 5px solid #17a1e3;
+  border-radius: 35px;
+  flex-wrap: nowrap;
+  background-image: linear-gradient(180deg, #17a1e366, #17a1e366, #17a1e300);
+}
+
+.link-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  color: #dedffd !important;
+  text-decoration: none !important;
+  width: 200px;
+}
+
+.link-item:hover {
+  background-color: #0a405899;
+  color: #4ef5ff !important;
+  box-shadow: 0 0 19px 2px #17a1e382;
+}
+
+.link-item img {
+  width: 64px;
+  height: 64px;
+  padding-right: 15px;
+}
+
+.link-item p {
+  font-size: 26px
+}
+
+#games {
+  animation-name: gameAnim;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes gameAnim {
+  from {
+    filter: hue-rotate(1deg);
+  }
+  to {
+    filter: hue-rotate(359deg);
+  }
+}
